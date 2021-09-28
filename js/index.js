@@ -32,3 +32,19 @@ para.addEventListener('copy', function (event){
    }, 2000);
 }, false);
 
+//keydown
+function dKey(event){
+    if(event.key === 'd'){
+        alert('Hi');
+    }
+} 
+document.addEventListener('keydown', dKey);
+
+//doubleclick
+const signUp = document.querySelector('.btn');
+signUp.addEventListener('dblclick', function (event) {
+    event.target.style.color = '#75ba76';
+    setTimeout(function(){
+        event.target.style.color = '';
+    }, 2000);
+}, false);
