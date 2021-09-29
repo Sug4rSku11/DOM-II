@@ -66,3 +66,12 @@ imgSmall.addEventListener('mouseenter', function (event) {
         event.target.style.width = '';
     }, 2000);
 })
+
+//on drag
+const imgDrag = document.querySelector('.img-fluid');
+imgDrag.addEventListener('drag', function(event){
+    event.target.style.opacity = .5;
+    setTimeout(function(){
+        event.target.style.opacity = '';
+    }, 2000);
+});
