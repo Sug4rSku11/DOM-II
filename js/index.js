@@ -22,7 +22,7 @@ focusImg.addEventListener('blur', (event) => {
 
 //copy
 //p
-const para = document.querySelectorAll('p');
+const para = document.querySelector('p');
 para.addEventListener('copy', function (event){
    para.style.backgroundColor = '#ffde9c';
    setTimeout(function(){
