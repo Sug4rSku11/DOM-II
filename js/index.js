@@ -11,18 +11,18 @@ logoHeading.addEventListener('mouseover', function (event){
 
 //focus
 //.intro img
-const focusImg = document.querySelector('.intro img');
+const focusImg = document.querySelector('.text-content h2');
 focusImg.addEventListener('focus', (event) => {
-    event.target.style.background = 'orange';    
+    event.target.style.backgroundColor = 'orange';    
 });
 focusImg.addEventListener('blur', (event) => {
-    event.target.style.background = '';
+    event.target.style.backgroundColor = '';
 })
 
 
 //copy
 //p
-const para = document.querySelector('p');
+const para = document.querySelectorAll('p');
 para.addEventListener('copy', function (event){
    para.style.backgroundColor = '#ffde9c';
    setTimeout(function(){
@@ -37,6 +37,22 @@ function dKey(event){
     }
 } 
 document.addEventListener('keydown', dKey);
+
+//keyup
+function kKey(event){
+    if(event.key === 'k'){
+        alert('Hello');
+    }
+}
+document.addEventListener('keyup', kKey);
+
+//keypress
+function eKey(event) {
+    if (event.key === 'e') {
+        alert('Hola')
+    }
+}
+document.addEventListener('keypress', eKey)
 
 //doubleclick
 const signUp = document.querySelector('.btn');
@@ -73,5 +89,14 @@ imgDrag.addEventListener('drag', function(event){
     event.target.style.opacity = .5;
     setTimeout(function(){
         event.target.style.opacity = '';
+    }, 2000);
+});
+
+//dragend
+const imgEnd = document.querySelector('.content-destination img');
+imgEnd.addEventListener('dragend', function(event){
+    event.target.style.border = 'dashed';
+    setTimeout(function(){
+        event.target.style.border = '';
     }, 2000);
 });
