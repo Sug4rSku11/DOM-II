@@ -19,8 +19,6 @@ focusImg.addEventListener('blur', (event) => {
     event.target.style.background = '';
 })
 
-//.btn
-//resize
 
 //copy
 //p
@@ -48,3 +46,14 @@ signUp.addEventListener('dblclick', function (event) {
         event.target.style.color = '';
     }, 2000);
 }, false);
+
+
+//click
+
+const welcome = document.querySelector('header h2');
+welcome.addEventListener('click', function (event){
+    event.target.style.border = 'dotted';
+    setTimeout(function(){
+        event.target.style.border = '';
+    }, 2000);
+})
