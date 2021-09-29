@@ -57,3 +57,12 @@ welcome.addEventListener('click', function (event){
         event.target.style.border = '';
     }, 2000);
 })
+
+//mouse enter
+const imgSmall = document.querySelector('img');
+imgSmall.addEventListener('mouseenter', function (event) {
+    event.target.style.width = "50%";
+    setTimeout(function(){
+        event.target.style.width = '';
+    }, 2000);
+})
